@@ -3,40 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>The Evidence Behind TeamPath — Research &amp; Evidence</title>
 <style>
 /* ============================================================
-   TEAMPATH BRAND TOKENS — edit these to match team-path.com.
-   (Placeholders below are a clean, on-brand-leaning default.)
+   TEAMPATH BRAND TOKENS — pulled from the live Webflow site.
    ============================================================ */
 :root{
-  --tp-bg:        #FBFAF8;   /* page background        */
-  --tp-paper:     #FFFFFF;   /* card background        */
-  --tp-ink:       #1C1B19;   /* primary text           */
-  --tp-muted:     #6E6A63;   /* secondary text         */
-  --tp-line:      #ECE8E1;   /* borders / hairlines    */
-  --tp-accent:    #11635C;   /* links + accents  <-- swap for brand colour */
-  --tp-accent-2:  #C8772E;   /* warm highlight   <-- swap for brand colour */
-  --tp-font:      "Inter","Helvetica Neue",Arial,system-ui,sans-serif; /* swap for brand font */
+  --tp-bg:        #F5FAFA;   /* page background (Background 3)        */
+  --tp-paper:     #FFFFFF;   /* card background                       */
+  --tp-panel:     #E6F5F7;   /* legend / soft panel (Background Green 2) */
+  --tp-ink:       #001F1F;   /* headings (General/Heading)            */
+  --tp-body:      #3A4242;   /* body text (General/Body)              */
+  --tp-muted:     #5C6A6A;   /* secondary text                        */
+  --tp-line:      #DDE7E7;   /* borders / hairlines (Stroke 5)        */
+  --tp-accent:    #007A7A;   /* links + accents (Brand/Accent)        */
+  --tp-accent-2:  #FFB430;   /* warm highlight (Brand/Yellow)         */
+  --tp-bright:    #179A8F;   /* bright teal (Brand/Button)            */
+  --tp-font:      "Poppins","Helvetica Neue",Arial,system-ui,sans-serif;
   --tp-maxw:      760px;
   --tp-radius:    12px;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; background:var(--tp-bg); color:var(--tp-ink);
+  margin:0; background:var(--tp-bg); color:var(--tp-body);
   font-family:var(--tp-font); line-height:1.6;
   font-size:17px; -webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:var(--tp-maxw); margin:0 auto; padding:56px 22px 96px}
 .kicker{font-size:13px; letter-spacing:.14em; text-transform:uppercase;
   color:var(--tp-accent); font-weight:600; margin:0 0 10px}
-h1{font-size:34px; line-height:1.15; margin:0 0 22px; letter-spacing:-.01em}
+h1{font-size:34px; line-height:1.15; margin:0 0 22px; letter-spacing:-.01em; color:var(--tp-ink)}
 .lede{font-size:18px; margin:0 0 16px}
 .orient{color:var(--tp-muted); font-size:15.5px; margin:0 0 26px}
-h3{font-size:18px; margin:26px 0 10px; letter-spacing:-.005em}
+h3{font-size:18px; margin:26px 0 10px; letter-spacing:-.005em; color:var(--tp-ink)}
 p{margin:0 0 14px}
-a{color:var(--tp-accent); text-decoration:none; border-bottom:1px solid rgba(17,99,92,.28)}
+a{color:var(--tp-accent); text-decoration:none; border-bottom:1px solid rgba(0,122,122,.30)}
 a:hover{border-bottom-color:var(--tp-accent)}
 strong{font-weight:680}
 .note{color:var(--tp-muted); font-size:15px; margin:6px 0 16px}
@@ -44,7 +49,7 @@ strong{font-weight:680}
 blockquote{margin:22px 0; padding:2px 0 2px 18px; border-left:3px solid var(--tp-accent-2);
   font-size:18px; color:var(--tp-ink)}
 /* legend */
-.legend{background:var(--tp-paper); border:1px solid var(--tp-line);
+.legend{background:var(--tp-panel); border:1px solid var(--tp-line);
   border-radius:var(--tp-radius); padding:18px 20px; margin:0 0 30px; font-size:14.5px;
   color:var(--tp-muted)}
 .legend strong{color:var(--tp-ink)}
@@ -219,7 +224,7 @@ details.qa[open]>summary{border-bottom:1px solid var(--tp-line)}
 <div class="card"><span class="badge">📋</span><div class="card-body"><strong>The alliance sets how well coaching <em>starts</em> more than how much it <em>grows</em> — and the client's own self-belief matters most.</strong> The honest nuance on the working alliance. <a href="https://doi.org/10.1037/cpb0000175" target="_blank" rel="noopener"><em>de Haan et al. (2020), Consulting Psychology Journal</em></a> · study (field) · peer-reviewed</div></div>
 <div class="card"><span class="badge">📊</span><div class="card-body"><strong>A systematic review maps where digital coaching fits.</strong> Digital handles structure and scale; humans hold the relationship and judgement. <a href="https://doi.org/10.1108/JWAM-11-2024-0164" target="_blank" rel="noopener"><em>Passmore, Olafsson & Tee (2026), Journal of Work-Applied Management</em></a> · systematic review · peer-reviewed</div></div>
 <p class="note"><em>What the human layer adds: the research draws the line precisely — AI for structure and scale, humans for the relationship, judgement and the client's own confidence. TeamPath is built on both sides of that line.</em></p></div></details>
-<details class="qa"><summary>Appendix — Rituals by Compass area, with supporting evidence</summary><div class="qa-body"><p class="note"><em>The questions above evidence each Compass dimension. This goes a level deeper: for each area, it names the rituals TeamPath prescribes and gives the research behind them as one card per study. It's built to grow — add a ritual, add a card. Where a ritual is, in effect, the studied intervention itself, it's marked Direct anchor.</em></p>
+<details class="qa"><summary>Appendix — Team rituals with supporting evidence</summary><div class="qa-body"><p class="note"><em>The questions above evidence each Compass dimension. This goes a level deeper: for each area, it names the rituals TeamPath prescribes and gives the research behind them as one card per study. It's built to grow — add a ritual, add a card. Where a ritual is, in effect, the studied intervention itself, it's marked Direct anchor.</em></p>
 <h3>Why — purpose, meaning, values</h3>
 <p><em>The rituals:</em> Connect to Who You Serve · Define a Team Contribution Statement · Explore Team Values · Living Organization Values at Work · Team Vision: Postcards from the Future · Playing to Win.</p>
 <div class="card"><span class="badge">🧪</span><div class="card-body"><strong>Seeing who your work serves lifts effort.</strong> <em>(Direct anchor: Connect to Who You Serve.)</em> Fundraisers who spent five minutes with one person helped by their work raised far more the following month. <a href="https://doi.org/10.1037/0021-9010.93.1.108" target="_blank" rel="noopener"><em>Grant (2008), Journal of Applied Psychology</em></a> · field experiment · +142% · peer-reviewed</div></div>
@@ -267,7 +272,7 @@ details.qa[open]>summary{border-bottom:1px solid var(--tp-line)}
 <div class="card"><span class="badge">📋</span><div class="card-body"><strong>Teams that build their own rituals report +23% commitment to purpose and +20% psychological safety.</strong> A field study across 60 countries. <a href="https://hbr.org/2025/01/the-surprising-power-of-team-rituals" target="_blank" rel="noopener"><em>Zakhour & Hadley (2025), Harvard Business Review</em></a> · study (field) · 60 countries</div></div>
 <div class="card"><span class="badge">📚</span><div class="card-body"><strong>Practical ritual design for teams.</strong> <a href="https://www.ritualdesignlab.org" target="_blank" rel="noopener"><em>Ozenc & Hagan (2017), Rituals for Work</em></a> · book / practitioner framework</div></div>
 <p class="note"><em>Build target: the when-to-collaborate set (Match the Moment, Together or Alone, What Belongs on the Team's Plate), and the design-thinking and self-knowledge rituals without a dedicated card, are the natural next candidates for sourcing as the library grows.</em></p></div></details>
-<details class="qa"><summary>Appendix — Personal rituals & the wider evidence library</summary><div class="qa-body"><p class="note"><em>TeamPath's personal layer — individual exercises and AI-coach prompts — is a separate population from the team rituals above, and rests on its own evidence. These are its anchors.</em></p>
+<details class="qa"><summary>Appendix — Personal rituals with supporting evidence</summary><div class="qa-body"><p class="note"><em>TeamPath's personal layer — individual exercises and AI-coach prompts — is a separate population from the team rituals above, and rests on its own evidence. These are its anchors.</em></p>
 <p><em>The exercises:</em> Exploring Values · Personal Purpose: Finding Ikigai · Personal Purpose: Wheel of Life · Set Personal Goals · Personal Projects Analysis · Shape Your Role · Career Conversations · Working Styles & the Manual of Me.</p>
 <div class="card"><span class="badge">📚</span><div class="card-body"><strong>People are guided by a stable set of core values.</strong> <em>(Exploring Values.)</em> Schwartz's cross-cultural work maps ten basic human values that shape motivation and choice. <a href="https://doi.org/10.1016/S0065-2601(08" target="_blank" rel="noopener"><em>Schwartz (1992), Advances in Experimental Social Psychology</em></a>60281-6) · foundational theory · peer-reviewed</div></div>
 <div class="card"><span class="badge">📚</span><div class="card-body"><strong>A sense of purpose sustains motivation and wellbeing.</strong> <em>(Finding Ikigai.)</em> The Japanese concept of <em>ikigai</em> — a reason to get up in the morning — links purpose to sustained wellbeing. Kamiya (1966), Ikigai ni tsuite · book / foundational concept</div></div>
