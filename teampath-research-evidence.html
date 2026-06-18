@@ -282,5 +282,30 @@ details.qa[open]>summary{border-bottom:1px solid var(--tp-line)}
 <div class="card"><span class="badge">📚</span><div class="card-body"><strong>We make sense of ourselves through the story we tell about our lives.</strong> <em>(Manual of Me, Career Conversations.)</em> <a href="https://doi.org/10.1037/1089-2680.5.2.100" target="_blank" rel="noopener"><em>McAdams (2001), Review of General Psychology</em></a> · review / theory · peer-reviewed</div></div></div></details>
 <p class="foot">Every claim above is backed by at least two independent findings. Sources are linked to their journal of record (DOI). Last updated June 2026.</p>
 </div>
+<script>
+/* Auto-height: tell the parent (Webflow) page how tall this content is,
+   so the embedding iframe can resize with no internal scrollbar. */
+(function(){
+  function postHeight(){
+    var h = Math.max(
+      document.documentElement.scrollHeight,
+      document.body ? document.body.scrollHeight : 0
+    );
+    parent.postMessage({ tpEvidenceHeight: h }, "*");
+  }
+  window.addEventListener("load", postHeight);
+  window.addEventListener("resize", postHeight);
+  // fires when any <details> question expands/collapses
+  document.addEventListener("toggle", function(e){
+    if (e.target && e.target.tagName === "DETAILS") postHeight();
+  }, true);
+  if (window.ResizeObserver){
+    try { new ResizeObserver(postHeight).observe(document.body); } catch(e){}
+  }
+  // a couple of delayed posts to catch web-font reflow
+  setTimeout(postHeight, 300);
+  setTimeout(postHeight, 1200);
+})();
+</script>
 </body>
 </html>
